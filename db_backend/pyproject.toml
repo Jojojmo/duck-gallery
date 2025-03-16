@@ -1,0 +1,24 @@
+[project]
+name = "db-backend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Jojojmo",email = "jmo.nick@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pymongo (>=4.10.1,<5.0.0)",
+    "imagehash (>=4.3.1,<5.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "typer (>=0.15.2,<0.16.0)"
+]
+
+
+[project.scripts]
+catalog = "db_backend.cli.Catalog:app"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

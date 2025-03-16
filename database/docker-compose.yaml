@@ -1,0 +1,12 @@
+
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - 8081:27017
+    volumes:
+      - ./data:/data/db
+      - ./dump:/dump
+      - ./init.sh:/docker-entrypoint-initdb.d/init.sh:ro

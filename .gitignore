@@ -1,0 +1,11 @@
+database\dump\*
+database\data\*
+db_backend\.env
+db_backend\db_backend\__pycache__
+db_backend\db_backend\cli\__pycache__
+db_backend\db_backend\package\__pycache__
+db_backend\logs\*
+db_backend\temp
+db_backend\tmp
+db_backend\poetry.lock
+do_label\.env
