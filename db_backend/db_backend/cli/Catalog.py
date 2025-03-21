@@ -108,7 +108,7 @@ def next(
     catalog_items = db.CATALOG_COLLECTION.find({"id_album": album_id}, {"id_image": 1}).to_list()
     catalog_ids = list(map(lambda doc: doc["id_image"], catalog_items))
 
-    results = db.IMAGES_COLLECTION.find({"_id": {"$nin": catalog_ids}}).limit(limit).to_list()    
+    results = db.IMAGES_COLLECTION.find({"_id": {"$nin": catalog_ids}, "id_album": album_id}).limit(limit).to_list()    
 
     save_many_imges(results, TMP_DIR)
 
